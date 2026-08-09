@@ -1,5 +1,6 @@
 """shipit: tiny release-notes helper."""
 
+"""Impoprt date"""
 from datetime import date
 
 def format_note(kind: str, text: str) -> str:
