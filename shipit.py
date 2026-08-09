@@ -3,13 +3,19 @@
 """Import date"""
 from datetime import date
 
-def format_note(kind: str, text: str) -> str:
-    """Format one changelog line, e.g. '- [feat] add login page'."""
-    return f"- [{kind}] {text}"
+KINDS = ["feat","fix", "docs", "chore"]
 
 def today() -> str:
     """Return today's date as an ISO string, e.g. '2026-08-08'."""
     return date.today().isoformat()
+
+
+def format_note(kind: str, text: str) -> str:
+    """Format one changelog line. kind is a short tag such as feat or fix."""
+    if kind not in KINDS:
+        raise ValueError(f"kind must be one of {KINDS}")
+    return f"- [{kind}] {text}"
+
 
 if __name__ == "__main__":
     print(format_note("feat", "initial shipit skeleton"))
