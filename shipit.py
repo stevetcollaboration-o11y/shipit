@@ -14,7 +14,7 @@ def format_note(kind: str, text: str) -> str:
     """Format one changelog line. kind is a short tag such as feat or fix."""
     if kind not in KINDS:
         raise ValueError(f"kind must be one of {KINDS}")
-    return f"- [{kind}] {text}"
+    return f"✨ - [{kind}] {text}"
 
 
 if __name__ == "__main__":
