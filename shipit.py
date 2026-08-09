@@ -1,6 +1,6 @@
 """shipit: tiny release-notes helper."""
 
-"""Import date"""
+"""Import dates"""
 from datetime import date
 
 KINDS = ["feat","fix", "docs", "chore"]
