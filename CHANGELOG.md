@@ -1,4 +1,4 @@
-# Changelog
+# Changelog - shipit
 
 ✨ - [FEAT] validate note kinds against a KINDS list
 
