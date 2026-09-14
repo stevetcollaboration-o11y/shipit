@@ -16,7 +16,13 @@ def format_note(kind: str, text: str) -> str:
         raise ValueError(f"kind must be one of {KINDS}")
     return f"✨ - [{kind.upper()}] {text}"
 
-
+def write_notes(notes: list[str], path: str = "CHANGELOG.md") -> None:
+    """Append formatted note lines to the changelog file."""
+    if not notes:
+        raise ValueError("notes must not be empty")
+    with open(path, "a") as fh:
+        for n in notes:
+            fh.write(n + "\n")
 
 if __name__ == "__main__":
     print(format_note("feat", "initial shipit skeleton"))
