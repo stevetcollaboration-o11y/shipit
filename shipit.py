@@ -24,5 +24,7 @@ def write_notes(notes: list[str], path: str = "CHANGELOG.md") -> None:
         for n in notes:
             fh.write(n + "\n")
 
+# local edit, made while the remote was moving
+
 if __name__ == "__main__":
     print(format_note("feat", "initial shipit skeleton"))
