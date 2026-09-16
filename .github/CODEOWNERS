@@ -1,0 +1,3 @@
+# Ops-facing files get platform review
+/.github/   @stevetcollaboration-o11y
+*.md        @stevetcollaboration-o11y
