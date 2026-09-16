@@ -11,6 +11,8 @@ def today() -> str:
 
 def release_header(version: str) -> str:
     """Return a markdown header for one release, e.g. '## 1.2.3 - 2026-08-08'."""
+    if not version:
+        raise ValueError("version must be a non-empty string")
     return f"## {version} - {today()}"
 
 
