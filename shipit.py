@@ -9,6 +9,10 @@ def today() -> str:
     """Return today's date as an ISO string, e.g. '2026-08-08'."""
     return date.today().isoformat()
 
+def release_header(version: str) -> str:
+    """Return a markdown header for one release, e.g. '## 1.2.3 - 2026-08-08'."""
+    return f"## {version} - {today()}"
+
 
 def format_note(kind: str, text: str) -> str:
     """Format one changelog line. kind is a short tag such as feat or fix."""
