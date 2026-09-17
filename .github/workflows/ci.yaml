@@ -13,7 +13,7 @@ jobs:
       - name: install deps
         run: uv sync --frozen
       - name: lint (compile check)
-        run: uv run python -m py_compile shipit.py_compile
+        run: uv run python -m py_compile shipit.py
       - name: run tests
         run: uv run pytest -v
       - name: context tour
